@@ -8,14 +8,13 @@ footer {
     color: white;
     font-family: 'Montserrat';
     font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 30px;
   }
 
   img {
     width: 122px;
     filter: sepia(94%) saturate(0%) hue-rotate(162deg) brightness(104%) contrast(500%);
-  }
-
-  * {
-    margin: 30px 20px;
+    margin-top: 50px;
   }
 }

@@ -1,7 +1,10 @@
+import Banner from '../components/banner'
+import banner2 from './../assets/img/banner2.webp'
+
 function About() {
   return (
     <div>
-      <h1>A Propos</h1>
+      <Banner image={banner2}/>
     </div>
   )
 }

@@ -1,10 +1,11 @@
 import './../styles/pages/home.scss'
-import Carousel from '../components/carousel'
+import Banner from '../components/banner'
+import banner1 from './../assets/img/banner1.webp'
 
 function Home() {
   return (
     <>
-    <Carousel />
+    <Banner image={banner1}/>
     </>
   )
 }

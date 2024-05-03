@@ -1,8 +1,12 @@
 // import { useState, useEffect } from 'react';
-import Carousel1 from './../assets/img/banner1.webp'
-import './../styles/components/carousel.scss'
+import './../styles/components/banner.scss'
 
-function Carousel() {
+// pour que typescript soit content et sache que image est un string
+interface CarouselProps {
+  image: string
+}
+
+function Banner({image}: CarouselProps) {
 
   // const [carouselImage, setcarouselImage] = useState(Carousel1)
   // // Auto switch toutes les 5s
@@ -18,7 +22,7 @@ function Carousel() {
   return (
     <div className='carousel'>
       <div className='carousel-content'>
-        <img src={Carousel1} alt='Photo de récifs en bord de mer'></img>
+        <img src={image} alt='Photo de récifs en bord de mer'></img>
         <div className='carousel-overlay'></div>
         <h1>Chez vous, partout et ailleurs</h1>
       </div>
@@ -26,4 +30,4 @@ function Carousel() {
   )
 }
 
-export default Carousel
+export default Banner
