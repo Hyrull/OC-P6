@@ -1,11 +1,10 @@
 import './../styles/pages/home.scss'
+import Carousel from '../components/carousel'
 
 function Home() {
   return (
     <>
-    <div>
-      <h1>/Reste de page</h1>
-    </div>
+    <Carousel />
     </>
   )
 }
