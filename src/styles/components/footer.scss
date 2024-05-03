@@ -1,0 +1,21 @@
+footer {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 24px;
+  }
+
+  img {
+    width: 122px;
+    filter: sepia(94%) saturate(0%) hue-rotate(162deg) brightness(104%) contrast(500%);
+  }
+
+  * {
+    margin: 30px 20px;
+  }
+}
