@@ -1,8 +1,10 @@
 function Home() {
   return (
+    <>
     <div>
-      <h1> CA MARCHE</h1>
+      <h1>/Reste de page</h1>
     </div>
+    </>
   )
 }
 
