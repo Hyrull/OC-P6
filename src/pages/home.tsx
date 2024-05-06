@@ -5,7 +5,7 @@ import banner1 from './../assets/img/banner1.webp'
 function Home() {
   return (
     <>
-    <Banner image={banner1}/>
+    <Banner image={banner1} hideOverlay={false} hideTitle = {false}/>
     </>
   )
 }

@@ -1,0 +1,57 @@
+@import './../variables.scss';
+
+.dropdown {
+
+  .dropdown-header {
+    background-color: $main-color;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    h2 {
+      font-family: 'Montserrat';
+      font-size: 18px;
+      color: white
+    }
+
+    img {
+      width: 25px;
+      height: 25px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.rotate {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .dropdown-box {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    padding: 0 20px;
+    position: relative;
+
+    
+    &.visible {
+      max-height: 200px;
+      padding: 10px 20px;
+    }
+
+    .dropdown-content {
+      font-family: 'Montserrat';
+      font-size: 18px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+
+      &.visible {
+        opacity: 1;
+      }
+    }
+  }
+}
