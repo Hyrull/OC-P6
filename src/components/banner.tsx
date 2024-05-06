@@ -1,7 +1,6 @@
 // import { useState, useEffect } from 'react';
 import './../styles/components/banner.scss'
 
-// pour que typescript soit content et sache que image est un string
 interface BannerProps {
   image: string
   hideTitle: boolean

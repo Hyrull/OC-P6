@@ -1,12 +1,16 @@
-@font-face {
-  font-display: swap;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  src: url('./../../assets/fonts/montserrat-v26-latin-regular.woff2') format('woff2');
-}
+@import './../variables.scss';
 
 * {
   margin: 0;
   padding: 0;
+}
+
+.locations-gallery {
+  margin: 0px 18%;
+  background-color: $grey-background;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-radius: 20px;
+  padding-top: 10px;
 }
