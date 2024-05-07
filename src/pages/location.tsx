@@ -2,9 +2,22 @@ import { useParams } from 'react-router-dom';
 import LocationData from './../assets/data/logements.json';
 import './../styles/pages/location.scss'
 import Dropdown from '../components/dropdown';
+import FullStarPic from './../assets/img/star_full.png'
+import EmptyStarPic from './../assets/img/star_empty.png'
+
+const FullStar = () => {
+  return (
+      <img src={FullStarPic} alt="Etoile pleine"/>
+  )
+}
+const EmptyStar = () => {
+  return (
+      <img src={EmptyStarPic} alt="Etoile creuse"/>
+  )
+}
+
 
 function Location() {
-
   // Fetch l'ID depuis l'URL puis fetch la data de l'ID
   const {id} = useParams()
   const locationItem = LocationData.find(item => item.id === id)
@@ -57,7 +70,10 @@ function Location() {
           </ul>
         </div>
         <div className='rating'>
-          <h3>RATIG HERE: {rating}</h3>
+        {[...Array(5)].map((_, index) => {
+          const numericRating = parseInt(rating)
+          return index < numericRating ? <FullStar /> : <EmptyStar />
+          })}
         </div>
       </div>
       <div className='dropdowns'>
