@@ -6,26 +6,56 @@
   flex-direction: column;
   font-family: 'Montserrat';
 
-  .titles-and-host {
+  .main-content {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    margin-top: 20px;
     
-    h1 {
-      font-size: 36px;
-      color: $main-color;
-    }
-
+    .titles-and-tags {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      
+      h1 {
+        font-size: 36px;
+        color: $main-color;
+      }
+      
     h2 {
       font-size: 18px;
+      margin-top: 10px;
     }
+
+    .tags {
+      margin-top: 20px;
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+      }
+      
+      li {
+        color: white;
+        background-color: $main-color;
+        padding: 5px 40px;
+        border-radius: 10px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+  
+  .host-and-rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
     .host {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      padding: 10px;
 
       .host-name {
         display: flex;
@@ -43,28 +73,6 @@
         width: 64px;
         border-radius: 50%;
         padding: 10px;
-      }
-    }
-  }
-
-  .tags-and-rating {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    .tags {
-      ul {
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-      }
-
-      li {
-        color: white;
-        background-color: $main-color;
-        padding: 5px 40px;
-        border-radius: 10px;
-        margin-right: 5px;
       }
     }
 
@@ -94,6 +102,34 @@
     ul {
       list-style: none;
       margin: 10px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .location {
+    .main-content {
+      flex-direction: column
+    }
+
+    .host-and-rating {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+
+      .rating {
+        margin-top: 35px;
+      }
+    }
+
+    .dropdowns {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0px;
+
+      .dropdown {
+        margin-right: 0;
+        width: 110%;
+      }
     }
   }
 }

@@ -28,3 +28,18 @@ nav {
 
   }
 }
+
+@media (max-width: 767.98px) {
+  header {
+    img {
+      size: auto;
+    }
+
+    nav {
+      * {
+        padding: 8px;
+      }
+    }
+
+  }
+}

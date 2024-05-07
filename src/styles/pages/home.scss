@@ -14,3 +14,10 @@
   border-radius: 20px;
   padding-top: 10px;
 }
+
+@media (max-width: 1024px) {
+  .locations-gallery {
+    margin: 0px 8%;
+    background-color: white;
+  }
+}
