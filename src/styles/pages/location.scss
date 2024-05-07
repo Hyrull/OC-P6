@@ -121,6 +121,14 @@
       }
     }
 
+    .titles-and-tags {
+      .tags {
+        ul {
+          flex-wrap: wrap;
+        }
+      }
+    }
+
     .dropdowns {
       flex-direction: column;
       align-items: center;

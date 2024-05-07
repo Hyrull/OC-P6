@@ -55,37 +55,39 @@ function Location() {
   return (
     <div className='location'>
       <Carousel pictures={pictures}/>
-      <div className='titles-and-host'>
+      <div className='main-content'>
+      <div className='titles-and-tags'>
         <div className='titles'>
           <h1>{title}</h1>
           <h2>{location}</h2>
         </div>
-        <div className='host'>
+        <div className='tags'>
+          <ul>
+            {tagsListRender(tags)}
+          </ul>
+        </div>
+      </div>
+      <div className='host-and-rating'>
+      <div className='host'>
           <div className='host-name'>
           <p>{host.name.split(' ')[0]}</p>
           <p>{host.name.split(' ')[1]}</p>
           </div>
           <img src={host.picture} alt={`Photo de ${host.name}`}/>
         </div>
-      </div>
-      <div className='tags-and-rating'>
-        <div className='tags'>
-          <ul>
-            {tagsListRender(tags)}
-          </ul>
-        </div>
         <div className='rating'>
           {[...Array(5)].map((_, index) => {
-          const numericRating = parseInt(rating);
-          const customKey = generateKey()
-          return index < numericRating ? (
-            <FullStar key={customKey} customKey={customKey} />
-          ) : (
-            <EmptyStar key={customKey} customKey={customKey} />
-          )
-        })}
+            const numericRating = parseInt(rating);
+            const customKey = generateKey()
+            return index < numericRating ? (
+              <FullStar key={customKey} customKey={customKey} />
+            ) : (
+              <EmptyStar key={customKey} customKey={customKey} />
+            )
+          })}
         </div>
       </div>
+    </div>
       <div className='dropdowns'>
       <Dropdown title='Description' content={description} />
       <Dropdown title='Équipements' content={<ul>{equipmentsListRender(equipments)}</ul>} />
