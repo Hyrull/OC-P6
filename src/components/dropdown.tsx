@@ -21,7 +21,12 @@ function Dropdown({title, content} : DropdownProps) {
       className={displayContent ? 'rotate' : ''}/>
     </div>
     <div className={`dropdown-box ${displayContent ? 'visible' : ''}`}>
-      <p className={`dropdown-content ${displayContent ? 'visible' : ''}`}>{content}</p>
+      <div className={`dropdown-content ${displayContent ? 'visible' : ''}`}>
+        {typeof content === 'string' ? (
+            <p>{content}</p>
+          ) : (
+            <>{content}</>
+          )}</div>
     </div>
   </div>
   )

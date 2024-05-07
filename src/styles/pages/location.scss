@@ -31,6 +31,12 @@
       align-items: center;
       padding: 10px;
 
+      .host-name {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
       p {
         font-size: 18px;
         color: $main-color;
