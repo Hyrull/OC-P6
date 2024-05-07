@@ -7,11 +7,12 @@ import LocationData from './../assets/data/logements.json';
 interface LocationListProps {
   title: string;
   id: string;
+  cover: string;
 }
 
 function Home() {
   const renderLocationList = (LocationList: LocationListProps[]) => {
-    return LocationList.map(({ title, id }) => <LocationBox key={id} titre={title} id={id} />);
+    return LocationList.map(({ title, id, cover }) => <LocationBox key={id} titre={title} id={id} cover={cover}/>);
   }
 
   return (
