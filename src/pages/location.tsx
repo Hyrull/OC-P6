@@ -54,7 +54,7 @@ function Location() {
 
   return (
     <div className='location'>
-      {/* <Carousel pictures={pictures}/> */}
+      <Carousel pictures={pictures}/>
       <div className='titles-and-host'>
         <div className='titles'>
           <h1>{title}</h1>

@@ -10,10 +10,10 @@ interface BannerProps {
 function Banner({image, hideTitle, hideOverlay}: BannerProps) {
 
   return (
-    <div className='carousel'>
-      <div className='carousel-content'>
+    <div className='banner'>
+      <div className='banner-content'>
         <img src={image} alt='Photo de récifs en bord de mer'></img>
-        {!hideOverlay && <div className='carousel-overlay'></div>}
+        {!hideOverlay && <div className='banner-overlay'></div>}
         {!hideTitle && <h1>Chez vous, partout et ailleurs</h1>}
       </div>
     </div>

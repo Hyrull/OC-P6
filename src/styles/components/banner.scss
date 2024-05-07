@@ -1,4 +1,4 @@
-.carousel {
+.banner {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,14 +6,14 @@
   min-height: 223px;
   border-radius: 30px;
   position: relative;
-  overflow: hidden; /* Hide overflow content */
+  overflow: hidden;
 
-  .carousel-content {
+  .banner-content {
     position: relative;
     display: inline-block;
   }
     
-  .carousel-overlay {
+  .banner-overlay {
     position: absolute;
     top: 0;
     left: 0;
