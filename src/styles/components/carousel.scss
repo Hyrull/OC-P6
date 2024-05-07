@@ -26,13 +26,6 @@
     border-radius: 25px;
   }
 
-  &.next .carousel-image.active {
-    left: -100%;
-  }
-
-  &.prev .carousel-image.active {
-    left: 100%;
-  }
 
   .carousel-number {
     font-size: 18px;
