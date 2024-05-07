@@ -1,7 +1,7 @@
 import './../styles/pages/home.scss'
 import Banner from '../components/banner'
 import banner1 from './../assets/img/banner1.webp'
-import Location from '../components/location'
+import LocationBox from '../components/locationBox'
 import LocationData from './../assets/data/logements.json';
 
 interface LocationListProps {
@@ -11,7 +11,7 @@ interface LocationListProps {
 
 function Home() {
   const renderLocationList = (LocationList: LocationListProps[]) => {
-    return LocationList.map(({ title, id }) => <Location key={id} titre={title} id={id} />);
+    return LocationList.map(({ title, id }) => <LocationBox key={id} titre={title} id={id} />);
   }
 
   return (

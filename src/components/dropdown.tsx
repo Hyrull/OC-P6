@@ -4,7 +4,7 @@ import './../styles/components/dropdown.scss'
 
 interface DropdownProps {
   title: string
-  content: string
+  content: string  | JSX.Element
 }
 
 
