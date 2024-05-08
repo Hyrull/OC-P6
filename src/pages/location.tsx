@@ -5,6 +5,7 @@ import Dropdown from '../components/dropdown';
 import Carousel from '../components/carousel';
 import FullStarPic from './../assets/img/star_full.png'
 import EmptyStarPic from './../assets/img/star_empty.png'
+import ErrorPage from './errorpage';
 
 // Random key pour les stars
 const generateKey = () => {
@@ -24,7 +25,7 @@ function Location() {
   // Fetch l'ID depuis l'URL puis fetch la data de l'ID
   const {id} = useParams()
   const locationItem = LocationData.find(item => item.id === id)
-  if (!locationItem) {return <h1>Cette location n'existe pas.</h1>}
+  if (!locationItem) {return <ErrorPage /> }
 
   interface Host {
     name: string;

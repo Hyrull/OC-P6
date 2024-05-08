@@ -18,7 +18,7 @@ function Carousel({ pictures }: { pictures: string[] }) {
 
   const resetInterval = () => {
     clearInterval(intervalRef.current);
-    intervalRef.current = setInterval(nextPicture, 3500);
+    intervalRef.current = setInterval(nextPicture, 5000);
   };
 
   useEffect(() => {
