@@ -21,27 +21,27 @@
         color: $main-color;
       }
       
-    h2 {
-      font-size: 18px;
-      margin-top: 10px;
-    }
-
-    .tags {
-      margin-top: 20px;
-
-      ul {
-        list-style: none;
-        display: flex;
-        flex-direction: row;
+      h2 {
+        font-size: 18px;
+        margin-top: 10px;
       }
-      
-      li {
-        color: white;
-        background-color: $main-color;
-        padding: 5px 40px;
-        border-radius: 10px;
-        margin-right: 5px;
-      }
+
+      .tags {
+        margin-top: 20px;
+
+        ul {
+          list-style: none;
+          display: flex;
+          flex-direction: row;
+        }
+        
+        li {
+          color: white;
+          background-color: $main-color;
+          padding: 5px 40px;
+          border-radius: 10px;
+          margin-right: 5px;
+        }
     }
   }
 }
@@ -139,5 +139,44 @@
         width: 110%;
       }
     }
+  }
+}
+
+@media (max-width: 767.98px) {
+
+  .location {
+    margin: 40px;
+
+    .main-content {
+      .titles-and-tags {
+        h1 {
+          font-size: 24px;
+        }
+
+        h2 {
+          font-size: 16px;
+        }
+
+        .tags {
+          li {
+            font-size: 12px;
+            padding: 5px 20px;
+          }
+        }
+      }
+
+      .host-and-rating {
+        .rating {
+          img {
+            height: 18px;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .dropdowns {
+    margin: 0 4%;
   }
 }

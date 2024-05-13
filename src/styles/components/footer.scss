@@ -18,3 +18,15 @@ footer {
     margin-top: 50px;
   }
 }
+
+
+@media (max-width: 767.98px) {
+
+  footer {
+    p {
+      max-width: 200px;
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+}

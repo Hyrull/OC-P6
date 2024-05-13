@@ -7,25 +7,25 @@ function Carousel({ pictures }: { pictures: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextPicture = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % pictures.length);
-    resetInterval();
-  };
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % pictures.length)
+    resetInterval()
+  }
 
   const previousPicture = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + pictures.length) % pictures.length);
-    resetInterval();
-  };
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + pictures.length) % pictures.length)
+    resetInterval()
+  }
 
   const resetInterval = () => {
-    clearInterval(intervalRef.current);
-    intervalRef.current = setInterval(nextPicture, 5000);
-  };
+    clearInterval(intervalRef.current)
+    intervalRef.current = setInterval(nextPicture, 5000)
+  }
 
   useEffect(() => {
-    resetInterval();
-    return () => clearInterval(intervalRef.current);
-  }, []);
-  const intervalRef = useRef<number>();
+    resetInterval()
+    return () => clearInterval(intervalRef.current)
+  }, [])
+  const intervalRef = useRef<number>()
 
   return (
     <div className="carousel">
@@ -34,7 +34,7 @@ function Carousel({ pictures }: { pictures: string[] }) {
       <img src={nextArrow} alt='Flèche suivant' className={pictures.length > 1 ? "next-arrow" : 'no-display'} onClick={nextPicture}/>
       <p className={pictures.length > 1 ? "carousel-number" : 'no-display'}>{currentIndex+1}/{pictures.length}</p>
     </div>
-  );
+  )
 }
 
 export default Carousel;

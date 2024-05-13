@@ -56,8 +56,21 @@
 
 @media (max-width: 767.98px) {
   .banner {
+
+    border-radius: 10px;
+    margin: 10px 5%;
+    
     h1 {
-      font-size: 1.2em;
+      font-size: 18px;
+      left: 40%
+    }
+
+    .banner-overlay {
+      border-radius: 10px;
+    }
+
+    .banner-content > img { 
+        border-radius: 10px;
     }
   }
 }
