@@ -1,12 +1,7 @@
 import dropdownArrow from './../assets/img/dropdownarrow.png'
 import { useState } from 'react';
 import './../styles/components/dropdown.scss'
-
-interface DropdownProps {
-  title: string
-  content: string  | JSX.Element
-}
-
+import { DropdownProps } from '../types';
 
 function Dropdown({title, content} : DropdownProps) {
 

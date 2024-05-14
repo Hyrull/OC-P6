@@ -1,11 +1,6 @@
 // import { useState, useEffect } from 'react';
 import './../styles/components/banner.scss'
-
-interface BannerProps {
-  image: string
-  hideTitle: boolean
-  hideOverlay: boolean
-}
+import { BannerProps } from '../types'
 
 function Banner({image, hideTitle, hideOverlay}: BannerProps) {
 

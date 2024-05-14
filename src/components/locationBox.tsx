@@ -1,11 +1,6 @@
 import { Link } from "react-router-dom"
 import './../styles/components/locationBox.scss'
-
-interface LocationBoxProps {
-  titre: string
-  id: string
-  cover: string
-}
+import { LocationBoxProps } from "../types"
 
 
 function LocationBox({titre, id, cover} : LocationBoxProps) {

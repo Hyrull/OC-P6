@@ -6,6 +6,7 @@ import Carousel from '../components/carousel';
 import FullStarPic from './../assets/img/star_full.png'
 import EmptyStarPic from './../assets/img/star_empty.png'
 import ErrorPage from './errorpage';
+import { LocationProps } from '../types';
 
 // Random key pour les stars
 const generateKey = () => {
@@ -26,23 +27,6 @@ function Location() {
   const {id} = useParams()
   const locationItem = LocationData.find(item => item.id === id)
   if (!locationItem) {return <ErrorPage /> }
-
-  interface Host {
-    name: string;
-    picture: string;
-  }
-
-  interface LocationProps {
-    title: string
-    cover: string
-    pictures: string[]
-    description: string
-    host: Host
-    rating: string
-    location: string
-    equipments: string[]
-    tags: string[]
-  }
 
   // Store la data dans des consts du même nom
   const { title, pictures, description, host, rating, location, equipments, tags }: LocationProps = locationItem

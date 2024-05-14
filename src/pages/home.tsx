@@ -3,12 +3,8 @@ import Banner from '../components/banner'
 import banner1 from './../assets/img/banner1.webp'
 import LocationBox from '../components/locationBox'
 import LocationData from './../assets/data/logements.json';
+import { LocationListProps } from '../types';
 
-interface LocationListProps {
-  title: string;
-  id: string;
-  cover: string;
-}
 
 function Home() {
   const renderLocationList = (LocationList: LocationListProps[]) => {
