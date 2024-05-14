@@ -3,24 +3,12 @@ import LocationData from './../assets/data/logements.json';
 import './../styles/pages/location.scss'
 import Dropdown from '../components/dropdown';
 import Carousel from '../components/carousel';
-import FullStarPic from './../assets/img/star_full.png'
-import EmptyStarPic from './../assets/img/star_empty.png'
 import ErrorPage from './errorpage';
 import { LocationProps } from '../types';
 import Footer from '../components/footer';
+import StarRating from '../components/stars';
 
-// Random key pour les stars
-const generateKey = () => {
-  return Math.random().toString(36).substr(2, 9);
-}
 
-const FullStar = ({ customKey }: { customKey: string }) => {
-  return <img src={FullStarPic} alt="Etoile pleine" key={customKey} />
-}
-
-const EmptyStar = ({ customKey }: { customKey: string }) => {
-  return <img src={EmptyStarPic} alt="Etoile creuse" key={customKey} />
-}
 
 
 function Location() {
@@ -62,17 +50,7 @@ function Location() {
           </div>
           <img src={host.picture} alt={`Photo de ${host.name}`}/>
         </div>
-        <div className='rating'>
-          {[...Array(5)].map((_, index) => {
-            const numericRating = parseInt(rating);
-            const customKey = generateKey()
-            return index < numericRating ? (
-              <FullStar key={customKey} customKey={customKey} />
-            ) : (
-              <EmptyStar key={customKey} customKey={customKey} />
-            )
-          })}
-        </div>
+        <StarRating rating={rating} />
       </div>
     </div>
       <div className='dropdowns'>
