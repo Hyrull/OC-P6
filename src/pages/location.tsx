@@ -7,6 +7,7 @@ import FullStarPic from './../assets/img/star_full.png'
 import EmptyStarPic from './../assets/img/star_empty.png'
 import ErrorPage from './errorpage';
 import { LocationProps } from '../types';
+import Footer from '../components/footer';
 
 // Random key pour les stars
 const generateKey = () => {
@@ -38,6 +39,7 @@ function Location() {
   }
 
   return (
+    <>
     <div className='location'>
       <Carousel pictures={pictures}/>
       <div className='main-content'>
@@ -78,6 +80,8 @@ function Location() {
       <Dropdown title='Équipements' content={<ul>{equipmentsListRender(equipments)}</ul>} />
       </div>
     </div>
+    <Footer />
+    </>
   )
 }
 

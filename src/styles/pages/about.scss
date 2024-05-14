@@ -6,6 +6,12 @@
   margin: 20px 0
 }
 
+.about-content footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 @media (max-width: 1024px) {
   .infos {
     margin: 0px 5%;

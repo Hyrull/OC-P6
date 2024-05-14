@@ -4,6 +4,7 @@ import banner1 from './../assets/img/banner1.webp'
 import LocationBox from '../components/locationBox'
 import LocationData from './../assets/data/logements.json';
 import { LocationListProps } from '../types';
+import Footer from '../components/footer';
 
 
 function Home() {
@@ -12,12 +13,15 @@ function Home() {
   }
 
   return (
+    <>
     <div>
       <Banner image={banner1} hideOverlay={false} hideTitle={false} />
       <div className='locations-gallery'>
         {renderLocationList(LocationData)}
       </div>
     </div>
+    <Footer />
+    </>
   )
 }
 
